@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Wallet station</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/app.css" />
+    <script src="http://localhost:35729/livereload.js"></script>
+</head>
+<body>
+    <div class="input_page">
+        <header class="header">
+            <div class="header__back">
+                <div class="">
+                    <img src="styles/images/back_ico.png">
+                    アプリ暗証番号入力
+                </div>
+            </div>
+            
+
+        </header>
+        <main class="main">
+            <div class="input_page__center_text">
+                4~8桁の数字を入力してください
+            </div>
+            <div class="passcode_container">
+               <input id="passcode" class="passcode_container__input" maxlength="6" type="password"
+                      pattern="[0-9]*" inputmode="numeric"/>
+            </div>
+            <div class="input_page__bottom">
+                <a>
+                    アプリ暗証番号をお忘れの方 ＞
+                </a>
+            </div>
+        </main>
+    </div>
+<script>
+    document.getElementById("passcode").autofocus = true;
+</script>
+</body>
+</html>

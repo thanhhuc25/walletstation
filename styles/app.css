@@ -29,6 +29,10 @@ html, body {
     .header > .header__right .header__icon {
       display: inline-block;
       margin-left: 20px; }
+  .header__back {
+    font-family: HiraginoSans-W4;
+    font-size: 20px;
+    color: #FFFFFF; }
 
 .main {
   padding-top: 50px;
@@ -110,3 +114,33 @@ html, body {
         font-size: 8px;
         color: #B1B1B1;
         text-align: center; }
+
+/*input page*/
+.input_page__center_text {
+  font-family: HiraginoSans-W3;
+  font-size: 16px;
+  color: #000000;
+  text-align: center; }
+.input_page__bottom {
+  font-family: HiraginoSans-W6;
+  font-size: 12px;
+  color: #000000;
+  text-align: right;
+  padding-bottom: 10px; }
+
+.passcode_container {
+  padding: 80px 10px; }
+  .passcode_container__input {
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: transparent;
+    font-size: 60px;
+    text-align: center;
+    width: 100%;
+    display: block;
+    line-height: 30px;
+    letter-spacing: 10px;
+    color: #7C7C7C; }
+    .passcode_container__input:focus {
+      outline: none; }
