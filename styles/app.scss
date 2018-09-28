@@ -1,0 +1,130 @@
+html, body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #EEEEEE;
+  padding-bottom: 56px;
+}
+.header{
+  background: #38474F;
+  box-shadow: 0 2px 6px 0 rgba(75,75,75,0.50), 0 0 4px 0 rgba(0,0,0,0.12);
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  & > .header__left{
+    flex-basis: 30%;
+    & > .header__money{
+      padding: 8px 25px;
+      font-family: 'AppleSystemUIFont',Helvetica,Arial,serif;
+      font-size: 20px;
+      color: rgba(255,255,255,1.0);
+      text-align: justify;
+      line-height: 20px;
+      display: inline-block;
+      border: 1px solid #FFFFFF;
+      border-radius: 16px;
+    }
+  }
+  & > .header__right{
+    text-align: right;
+    flex-basis: 70%;
+    .header__icon{
+      display: inline-block;
+      margin-left: 20px;
+    }
+  }
+}
+
+.main{
+  padding-top: 50px;
+  padding-left: 13px;
+  padding-right: 13px;
+  padding-bottom: 20px;
+  & .main__center{
+    background-image: linear-gradient(-180deg, #858585 0%, #1A1A1A 97%);
+    border-radius: 10px;
+    padding: 10px;
+    & .main__center__top{
+      border: 1px solid #FFFFFF;
+      border-radius: 16px;
+      font-family: HiraginoSans-W3;
+      font-size: 10px;
+      color: #FFFFFF;
+      letter-spacing: 2.31px;
+      display: inline-block;
+      padding: 3px;
+    }
+    &__middle {
+      padding-left: 30px;
+      padding-top: 30px;
+      margin-bottom: 30px;
+      &__name {
+        font-family: Courier;
+        font-size: 20px;
+        color: #FFFFFF;
+        letter-spacing: 1.34px;
+        text-shadow: 0 1px 1px rgba(0,0,0,0.32);
+      }
+      &__number{
+        font-family: Courier;
+        font-size: 30px;
+        color: #FFFFFF;
+        letter-spacing: 0.96px;
+        line-height: 30px;
+        text-shadow: 0 1px 1px rgba(0,0,0,0.32);
+        margin-top: 15px;
+      }
+    }
+  }
+
+  .main_pay {
+    background: #FFFFFF;
+    box-shadow: 0 5px 2px 0 rgba(168,168,168,0.50);
+    border-radius: 4px;
+    padding: 26px;
+    margin-top: 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.main_coupon{
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    &__text{
+      font-family: HiraginoSans-W6;
+      font-size: 20px;
+      color: #444444;
+      text-align: left;
+      line-height: 20px;
+      padding-left: 10px;
+    }
+  }
+}
+.footer{
+  height: 56px;
+  position: fixed;
+  bottom:0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  background: #FFFFFF;
+  box-shadow: 0 0 2px 0 rgba(0,0,0,0.10), 0 -2px 10px 0 rgba(0,0,0,0.10);
+  justify-items: center;
+  &__item {
+    padding: 9px;
+    flex-basis: 20%;
+    text-align: center;
+    &__text{
+      font-size: 8px;
+      color: #000000;
+      text-align: center;
+      font-family: HiraginoSans-W6;
+      &--no-active{
+        font-size: 8px;
+        color: #B1B1B1;
+        text-align: center;
+      }
+    }
+  }
+}
