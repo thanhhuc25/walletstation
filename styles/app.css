@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body {
   min-height: 100%;
   margin: 0;
@@ -30,7 +31,7 @@ html, body {
       display: inline-block;
       margin-left: 20px; }
   .header__back {
-    font-family: HiraginoSans-W4;
+    font-family: HiraginoSans-W4, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
     font-size: 20px;
     color: #FFFFFF; }
     .header__back__a {
@@ -55,7 +56,7 @@ html, body {
     .main .main__center .main__center__top {
       border: 1px solid #FFFFFF;
       border-radius: 16px;
-      font-family: HiraginoSans-W3;
+      font-family: HiraginoSans-W3, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
       font-size: 10px;
       color: #FFFFFF;
       letter-spacing: 2.31px;
@@ -94,7 +95,7 @@ html, body {
       padding: 20px;
       margin-bottom: 30px; }
     .main .main_pay__text {
-      font-family: HiraginoSans-W6;
+      font-family: HiraginoSans-W6, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
       font-size: 20px;
       color: #444444;
       text-align: left;
@@ -119,7 +120,7 @@ html, body {
       font-size: 8px;
       color: #000000;
       text-align: center;
-      font-family: HiraginoSans-W6; }
+      font-family: HiraginoSans-W6, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; }
       .footer__item__text--no-active {
         font-size: 8px;
         color: #B1B1B1;
@@ -127,12 +128,12 @@ html, body {
 
 /*input page*/
 .input_page__center_text {
-  font-family: HiraginoSans-W3;
+  font-family: HiraginoSans-W3, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   font-size: 16px;
   color: #000000;
   text-align: center; }
 .input_page__bottom {
-  font-family: HiraginoSans-W6;
+  font-family: HiraginoSans-W6, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   font-size: 12px;
   color: #000000;
   text-align: right;
@@ -166,7 +167,7 @@ html, body {
     display: block;
     text-decoration: none; }
     .qr-code-page__content__barcode__text {
-      font-family: HiraginoSans-W3;
+      font-family: HiraginoSans-W3, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
       font-size: 16px;
       color: #000000;
       text-align: center; }
@@ -176,7 +177,7 @@ html, body {
       justify-items: center;
       align-items: center; }
       .qr-code-page__content__barcode__bottom > span {
-        font-family: HiraginoSans-W3;
+        font-family: HiraginoSans-W3, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
         font-size: 16px;
         color: #000000;
         text-align: center;
@@ -195,7 +196,7 @@ html, body {
     .qr-code-page__content__bottom__right {
       text-align: right; }
       .qr-code-page__content__bottom__right > a {
-        font-family: HiraginoSans-W6;
+        font-family: HiraginoSans-W6, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
         font-size: 16px;
         color: #000000;
         text-decoration: none; }
@@ -235,24 +236,24 @@ html, body {
     justify-content: flex-start;
     align-items: center; }
     .modal-content__top__text {
-      font-family: HiraginoSans-W4;
+      font-family: HiraginoSans-W4, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
       font-size: 20px;
       color: rgba(0, 0, 0, 0.6);
       line-height: 26px;
       padding-left: 10px; }
   .modal-content__text1 {
-    font-family: HiraginoSans-W6;
+    font-family: HiraginoSans-W6, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
     font-size: 16px;
     color: rgba(0, 0, 0, 0.6);
     line-height: 26px;
     margin-top: 20px; }
   .modal-content__text2 {
-    font-family: HiraginoSans-W3;
+    font-family: HiraginoSans-W3, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
     font-size: 12px;
     color: rgba(0, 0, 0, 0.6);
     line-height: 26px; }
   .modal-content__text3 {
-    font-family: HiraginoSans-W6;
+    font-family: HiraginoSans-W6, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
     font-size: 30px;
     color: rgba(0, 0, 0, 0.6);
     line-height: 26px;

@@ -38,7 +38,7 @@
     </div>
 <script>
     var input = document.getElementById("passcode");
-    input.autofocus = true;
+    input.focus();
     input.onkeypress = function(e){
         if (!e) e = window.event;
         var keyCode = e.keyCode || e.which;
