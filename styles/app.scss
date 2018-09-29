@@ -168,3 +168,68 @@ html, body {
     }
   }
 }
+/* qrcode */
+.qr-code-page{
+  &__content{
+    background: #FFFFFF;
+    border-radius: 4px;
+    margin-top: 20px;
+    &__barcode{
+      padding: 30px;
+      text-align: center;
+      &__text{
+        font-family: HiraginoSans-W3;
+        font-size: 16px;
+        color: #000000;
+        text-align: center;
+      }
+      &__bottom{
+        text-align: left;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        & > span{
+          font-family: HiraginoSans-W3;
+          font-size: 16px;
+          color: #000000;
+          text-align: center;
+          display: inherit;
+          &:last-child{
+            padding-left: 10px;
+          }
+        }
+      }
+    }
+    &__bottom{
+      background: #fff;
+      border-top: 1px solid #B1B1B1;
+      padding: 15px 10px;
+      display: flex;
+      justify-items: center;
+      align-items: center;
+      & > div{
+        flex-basis: 50%;
+      }
+      &__right{
+        text-align: right;
+        & > a{
+          font-family: HiraginoSans-W6;
+          font-size: 16px;
+          color: #000000;
+        }
+      }
+      &__left{
+        & > span{
+          display: inline-block;
+          &:first-child{
+            position: relative;
+            top: 3px;
+          }
+        }
+      }
+
+    }
+  }
+
+}
+

@@ -144,3 +144,50 @@ html, body {
     color: #7C7C7C; }
     .passcode_container__input:focus {
       outline: none; }
+
+/* qrcode */
+.qr-code-page__content {
+  background: #FFFFFF;
+  border-radius: 4px;
+  margin-top: 20px; }
+  .qr-code-page__content__barcode {
+    padding: 30px;
+    text-align: center; }
+    .qr-code-page__content__barcode__text {
+      font-family: HiraginoSans-W3;
+      font-size: 16px;
+      color: #000000;
+      text-align: center; }
+    .qr-code-page__content__barcode__bottom {
+      text-align: left;
+      display: flex;
+      justify-items: center;
+      align-items: center; }
+      .qr-code-page__content__barcode__bottom > span {
+        font-family: HiraginoSans-W3;
+        font-size: 16px;
+        color: #000000;
+        text-align: center;
+        display: inherit; }
+        .qr-code-page__content__barcode__bottom > span:last-child {
+          padding-left: 10px; }
+  .qr-code-page__content__bottom {
+    background: #fff;
+    border-top: 1px solid #B1B1B1;
+    padding: 15px 10px;
+    display: flex;
+    justify-items: center;
+    align-items: center; }
+    .qr-code-page__content__bottom > div {
+      flex-basis: 50%; }
+    .qr-code-page__content__bottom__right {
+      text-align: right; }
+      .qr-code-page__content__bottom__right > a {
+        font-family: HiraginoSans-W6;
+        font-size: 16px;
+        color: #000000; }
+    .qr-code-page__content__bottom__left > span {
+      display: inline-block; }
+      .qr-code-page__content__bottom__left > span:first-child {
+        position: relative;
+        top: 3px; }
