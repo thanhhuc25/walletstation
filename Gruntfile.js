@@ -18,17 +18,17 @@ module.exports = function (grunt) {
                 }]
             }
         },
-        cssmin: { // Begin CSS Minify Plugin
-            target: {
-                files: [{
-                    expand: true,
-                    cwd: 'styles',
-                    src: ['*.css', '!*.min.css'],
-                    dest: './styles',
-                    ext: '.min.css'
-                }]
-            }
-        },
+        // cssmin: { // Begin CSS Minify Plugin
+        //     target: {
+        //         files: [{
+        //             expand: true,
+        //             cwd: 'styles',
+        //             src: ['*.css', '!*.min.css'],
+        //             dest: './styles',
+        //             ext: '.min.css'
+        //         }]
+        //     }
+        // },
         // uglify: { // Begin JS Uglify Plugin
         //     build: {
         //         src: ['src/*.js'],
@@ -65,5 +65,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Register Grunt tasks
-    grunt.registerTask('default', [ 'cssmin', 'sass', 'watch']);
+    grunt.registerTask('default', [  'sass', 'watch']);
 };

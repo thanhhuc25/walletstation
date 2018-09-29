@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="styles/app.css" />
     <!--<script src="http://localhost:35729/livereload.js"></script>-->
 </head>
-<body>
-    <div class="input_page">
+<body onload="load()">
+    <div class="input_page" >
         <header class="header">
             <div class="header__back">
                 <a class="header__back__a" href="/index.html">
@@ -26,8 +26,10 @@
             </div>
             <div class="passcode_container">
                <input id="passcode"
-                      class="passcode_container__input" maxlength="8" type="password"
-                      pattern="[0-9]*" inputmode="numeric"/>
+                      style="-webkit-text-security: disc;"
+                      class="passcode_container__input" maxlength="8"
+                      type="number"
+                      />
             </div>
             <div class="input_page__bottom">
                 <a>
@@ -38,20 +40,23 @@
     </div>
 <script>
     var input = document.getElementById("passcode");
-    setTimeout(function () {
+
+    function load() {
+
         input.focus();
-    },500);
-    input.onkeypress = function(e){
+        input.click();
+    }
+
+    input.onkeyup = function(e){
         if (!e) e = window.event;
         var keyCode = e.keyCode || e.which;
+
         if (keyCode == '13'){
             window.location.href = "/qrcode.html";
+        } else {
+            if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);
         }
-    };
-    input.onblur = function () {
-        setTimeout(function () {
-            input.focus();
-        });
+
     };
 </script>
 </body>
