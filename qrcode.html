@@ -6,16 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/app.css" />
-    <script src="http://localhost:35729/livereload.js"></script>
+    <!--<script src="http://localhost:35729/livereload.js"></script>-->
 </head>
 <body>
     <div class="input_page qr-code-page">
         <header class="header">
-            <div class="header__back">
-                <div class="">
+            <div class="header__back header__back--left">
+                <a class="header__back__a" href="input.html">
                     <img src="styles/images/back_ico.png">
                     お支払いコード
-                </div>
+                </a>
+            </div>
+            <div class="header__back--right">
+                <img src="styles/images/photo.png">
             </div>
             
 
@@ -25,7 +28,7 @@
                 このコードをレジで提示してください
             </div>
             <div class="qr-code-page__content">
-                <div class="qr-code-page__content__barcode">
+                <a id="qr-code" href="javascript:void(0)" class="qr-code-page__content__barcode">
                     <img src="styles/images/barcode.png">
                     <div class="qr-code-page__content__barcode__text">
                         1234 5678 901234
@@ -39,7 +42,7 @@
                         </span>
                         <span>1:10</span>
                     </div>
-                </div>
+                </a>
                 <div class="qr-code-page__content__bottom">
                     <div class="qr-code-page__content__bottom__left">
                         <span>
@@ -48,7 +51,7 @@
                         <span>1,000pt</span>
                     </div>
                     <div class="qr-code-page__content__bottom__right">
-                        <a>
+                        <a href="/index.html">
                             使用しない
                         </a>
                     </div>
@@ -57,5 +60,36 @@
             </div>
         </main>
     </div>
+    <!-- modal-->
+    <div id="modal-success" class="modal modal-success">
+        <div class="modal-content">
+            <div class="modal-content__top">
+                <span>
+                    <img src="styles/images/wallet.png">
+                </span>
+                <span class="modal-content__top__text">
+                    お支払い完了
+                </span>
+            </div>
+            <div class="modal-content__text1">
+                大楠亭
+            </div>
+            <div class="modal-content__text2">
+                2018/08/20 (金)　12:30
+            </div>
+            <div class="modal-content__text3">
+                ¥5,000
+            </div>
+            <div class="modal-content__bottom">
+                <a href="/index.html">OK</a>
+            </div>
+        </div>
+
+    </div>
+<script>
+    document.getElementById("qr-code").onclick = function () {
+        document.getElementById("modal-success").style.display = "block";
+    }
+</script>
 </body>
 </html>
