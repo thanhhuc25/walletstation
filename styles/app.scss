@@ -115,7 +115,7 @@ html, body {
       color: #444444;
       text-align: left;
       line-height: 22px;
-      padding-left: 15px;
+      padding-left: 20px;
     }
   }
 }
@@ -192,6 +192,14 @@ html, body {
       text-align: center;
       display: block;
       text-decoration: none;
+      #barcode128{
+        text-align: center;
+      }
+      #qrcode{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        display: inline-block;
+      }
       &__text{
         font-family: HiraginoSans-W3, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
         font-size: 16px;
