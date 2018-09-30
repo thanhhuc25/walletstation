@@ -6,10 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/app.css" />
-    <script src="http://localhost:35729/livereload.js"></script>
+    <!--<script src="http://localhost:35729/livereload.js"></script>-->
 
-    <script src="js/JsBarcode.code128.min.js"></script>
-    <script src="js/qrcode.min.js"></script>
+    <script src="js/qrcode-page.min.js"></script>
 
 </head>
 <body>
@@ -33,8 +32,12 @@
             </div>
             <div class="qr-code-page__content">
                 <a id="qr-code" href="javascript:void(0)" class="qr-code-page__content__barcode">
+                    <div id="loader" class="spinner">
+                        <div class="bounce1"></div>
+                        <div class="bounce2"></div>
+                        <div class="bounce3"></div>
+                    </div>
                     <div id="barcode128">
-                        <!--<img src="styles/images/barcode.png">-->
                         <svg id="barcode-image"></svg>
                     </div>
 
@@ -42,7 +45,6 @@
                         <!--1234 5678 901234-->
                     <!--</div>-->
                     <div >
-                        <!--<img src="styles/images/qrcode.png">-->
                         <div id="qrcode" style="width:128px; height:128px;"></div>
                     </div>
                     <div class="qr-code-page__content__barcode__bottom">
@@ -87,7 +89,7 @@
                 2018/08/20 (金)　12:30
             </div>
             <div class="modal-content__text3">
-                ¥5,000
+                ¥<span id="total">5,000</span>
             </div>
             <div class="modal-content__bottom">
                 <a href="/index.html">OK</a>
@@ -99,9 +101,36 @@
 
 </script>
 <script>
-    document.getElementById("qr-code").onclick = function () {
-        document.getElementById("modal-success").style.display = "block";
-    };
+    window.COUNT = 0;
+    function checkStatus(transaction_token) {
+        fetch("/get_status.php", {
+            method: "POST",
+            body: JSON.stringify({transaction_token: transaction_token})
+        }).then(function (value) {
+            return value.json();
+        })
+        .then(function (value) {
+            if(value.transaction_status_code && value.transaction_status_code=="success"){
+                document.getElementById("total").innerText = value.purchase_price_amount;
+                document.getElementById("modal-success").style.display = "block";
+            } else{
+                if(window.COUNT < 2){
+                    window.COUNT++;
+                    setTimeout(function () {
+                        checkStatus(transaction_token);
+                    }, 3000);
+                }else{
+                    //@todo : for demo only
+                    document.getElementById("total").innerText = "5,000";
+                    document.getElementById("modal-success").style.display = "block";
+                }
+            }
+        })
+        .catch(function(err){
+            alert((err));
+        });
+    }
+
     function generateQRBarCode() {
         fetch("/method_list.php", {
         }).then(function (value) {
@@ -123,12 +152,6 @@
                         var transaction_token = data.transaction_token;
                         JsBarcode("#barcode-image",transaction_token, {
                         });
-                        // var qrcode = new QRCode(document.getElementById("qrcode"), {
-                        //     width : 100,
-                        //     height : 100,
-                        //     useSVG: true
-                        // });
-                        // qrcode.makeCode(transaction_token);
                         var qrcode = new QRCode("qrcode", {
                             text: transaction_token,
                             width: 128,
@@ -137,6 +160,8 @@
                             colorLight : "#ffffff",
                             correctLevel : QRCode.CorrectLevel.H
                         });
+                        document.getElementById("loader").style.display = "none";
+                        checkStatus(transaction_token);
                     }
                 })
                 .catch(function(err){

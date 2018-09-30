@@ -29,12 +29,17 @@ module.exports = function (grunt) {
         //         }]
         //     }
         // },
-        // uglify: { // Begin JS Uglify Plugin
-        //     build: {
-        //         src: ['src/*.js'],
-        //         dest: 'js/script.min.js'
-        //     }
-        // },
+        uglify: { // Begin JS Uglify Plugin
+            // build: {
+            //     src: ['src/*.js'],
+            //     dest: 'js/script.min.js'
+            // }
+            qrcode: {
+                files: {
+                    'js/qrcode-page.min.js': ['js/JsBarcode.code128.min.js', 'js/qrcode.min.js']
+                }
+            }
+        },
         // reload: {
         //     proxy: {
         //         host: 'walletstation.test'
@@ -59,11 +64,11 @@ module.exports = function (grunt) {
     // Load Grunt plugins
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    //grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
 
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Register Grunt tasks
-    grunt.registerTask('default', [  'sass', 'watch']);
+    grunt.registerTask('default', [ 'uglify', 'sass', 'watch']);
 };
