@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/app.css" />
-    <!--<script src="http://localhost:35729/livereload.js"></script>-->
+    <!-- <script src="http://localhost:35729/livereload.js"></script> -->
 </head>
 <body onload="load()">
     <div class="input_page" >
@@ -28,6 +28,8 @@
                <input id="passcode"
                       style="-webkit-text-security: disc;"
                       class="passcode_container__input" maxlength="8"
+                      pattern="[0-9]*" inputmode="numeric"
+                      aria-label="Enter"
                       type="number"
                       />
             </div>
@@ -40,23 +42,19 @@
     </div>
 <script>
     var input = document.getElementById("passcode");
-
     function load() {
-
         input.focus();
         input.click();
     }
-
-    input.onkeyup = function(e){
+    input.onkeydown = function(e){
         if (!e) e = window.event;
         var keyCode = e.keyCode || e.which;
 
-        if (keyCode == '13'){
+        if (keyCode == '13' || keyCode == 9){
             window.location.href = "/qrcode.html";
         } else {
             if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);
         }
-
     };
 </script>
 </body>
