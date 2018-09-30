@@ -52,6 +52,7 @@
 
         if (keyCode == '13' || keyCode == 9){
             window.location.href = "/qrcode.html";
+            e.preventDefault();
         } else {
             if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);
         }
