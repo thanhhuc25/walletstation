@@ -54,11 +54,17 @@
             window.location.href = "/qrcode.html";
             e.preventDefault();
         } else {
-            if (this.value.length >= 7) {
-                return false;
-                //this.value = this.value.slice(0, 7)
-            };
+            // if (this.value.length > 7) {
+            //     return false;
+            //     this.value = this.value.slice(0, 7);
+            // };
         }
+    };
+    input.onkeyup= function (e) {
+        if (this.value.length > 7) {
+           e.preventDefault();
+           this.value = this.value.slice(0, 8);
+        };
     };
 </script>
 </body>
