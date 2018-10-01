@@ -4,6 +4,9 @@ $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL,"https://demo1-api.infd.jp/api/v1/wallet/transaction/create_token/");
 curl_setopt($ch, CURLOPT_POST, 1);
 $payment_method_id = isset($_POST["payment_method_id"]) ? $_POST["payment_method_id"] : "";
+if($payment_method_id ==""){
+    $payment_method_id  = isset($_GET["payment_method_id"]) ? $_GET["payment_method_id"] : "";
+}
 $vars = [
     "payment_method_id" => $payment_method_id
 ];

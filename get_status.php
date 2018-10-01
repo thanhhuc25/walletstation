@@ -1,9 +1,16 @@
 <?php
+
+
 $ch = curl_init();
 //curl_setopt($ch, CURLOPT_URL,"http://52.243.57.222/api/v1/wallet/transaction/get_status/");
 curl_setopt($ch, CURLOPT_URL,"https://demo1-api.infd.jp/api/v1/wallet/transaction/get_status/");
 curl_setopt($ch, CURLOPT_POST, 1);
 $transaction_token = isset($_POST["transaction_token"]) ? $_POST["transaction_token"] : "";
+if($transaction_token ==""){
+    $transaction_token = isset($_GET["transaction_token"]) ? $_GET["transaction_token"] : "";
+}
+
+
 $vars = [
     "transaction_token" => $transaction_token
 ];
