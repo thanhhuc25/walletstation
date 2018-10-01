@@ -26,7 +26,7 @@
             </div>
             <div class="passcode_container">
                <input id="passcode"
-                      style="-webkit-text-security: disc;"
+                      style=""
                       class="passcode_container__input" maxlength="8"
                       pattern="[0-9]*" inputmode="numeric"
                       aria-label="Enter"
@@ -54,7 +54,10 @@
             window.location.href = "/qrcode.html";
             e.preventDefault();
         } else {
-            if (this.value.length > 7) this.value = this.value.slice(0, 7);
+            if (this.value.length > 7) {
+                return false;
+                //this.value = this.value.slice(0, 7)
+            };
         }
     };
 </script>
