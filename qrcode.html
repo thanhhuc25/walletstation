@@ -142,7 +142,7 @@
         })
         .then(function (value) {
             if(value.prepaids && value.prepaids.length > 0 || value.default_payment_method_id){
-                var method = value.prepaids.length > 0 ? value.prepaids[0] : value.default_payment_method_id;
+                var method = value.prepaids.length > 0 ? value.prepaids[0] : { payment_method_id: value.default_payment_method_id};
                 var method_id = method.payment_method_id;
 
                 fetch("/create_token.php?payment_method_id="+ method_id, {
