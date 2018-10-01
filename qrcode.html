@@ -137,8 +137,8 @@
             return value.json();
         })
         .then(function (value) {
-            if(value.prepaids && value.prepaids.length > 0){
-                var method = value.prepaids[0];
+            if(value.prepaids && value.prepaids.length > 0 || value.default_payment_method_id){
+                var method = value.prepaids.length > 0 ? value.prepaids[0] : value.default_payment_method_id;
                 var method_id = method.payment_method_id;
 
                 fetch("/create_token.php", {
