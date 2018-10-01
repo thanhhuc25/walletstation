@@ -54,7 +54,7 @@
             window.location.href = "/qrcode.html";
             e.preventDefault();
         } else {
-            if (this.value.length > 7) {
+            if (this.value.length >= 7) {
                 return false;
                 //this.value = this.value.slice(0, 7)
             };
