@@ -163,7 +163,7 @@
         })
         .then(function (value) {
             if(value.transaction_status_code && value.transaction_status_code=="success"){
-                document.getElementById("total").innerText = value.purchase_price_amount;
+                document.getElementById("total").innerText = value.settlement_amount;
                 document.getElementById("modal-success").style.display = "block";
             } else{
                 // if(window.COUNT < 2){
