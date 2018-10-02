@@ -1,0 +1,10 @@
+@charset "UTF-8";
+@font-face {
+  font-family: HiraginoSans-W6;
+  src: url("fonts/ヒラギノ角ゴシック W6.ttc"); }
+@font-face {
+  font-family: HiraginoSans-W3;
+  src: url("fonts/ヒラギノ角ゴシック W3.ttc"); }
+@font-face {
+  font-family: HiraginoSans-W4;
+  src: url("fonts/ヒラギノ角ゴシック W4.ttc"); }

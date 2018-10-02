@@ -4,26 +4,30 @@ html, body {
   margin: 0;
   padding: 0;
   background: #EEEEEE;
-  padding-bottom: 56px; }
+  padding-bottom: 0;
+  height: 100%; }
 
 .header {
   background: #38474F;
   box-shadow: 0 2px 6px 0 rgba(75, 75, 75, 0.5), 0 0 4px 0 rgba(0, 0, 0, 0.12);
-  padding: 12px 15px;
+  padding: 13px 15px;
+  padding-left: 12px;
+  padding-right: 20px;
   display: flex;
   align-items: center; }
   .header > .header__left {
     flex-basis: 30%; }
     .header > .header__left > .header__money {
-      padding: 8px 25px;
+      padding: 6px 25px;
       font-family: 'AppleSystemUIFont',Helvetica,Arial,serif;
-      font-size: 20px;
       color: white;
       text-align: justify;
       line-height: 20px;
       display: inline-block;
       border: 1px solid #FFFFFF;
-      border-radius: 16px; }
+      border-radius: 16px;
+      font-size: 14px;
+      color: #FFFFFF; }
   .header > .header__right {
     text-align: right;
     flex-basis: 70%; }
@@ -45,9 +49,9 @@ html, body {
   text-align: right; }
 
 .main {
-  padding-top: 50px;
-  padding-left: 13px;
-  padding-right: 13px;
+  padding-top: 41px;
+  padding-left: 12px;
+  padding-right: 12px;
   padding-bottom: 20px; }
   .main .main__center {
     background-image: linear-gradient(-180deg, #858585 0%, #1A1A1A 97%);
@@ -85,7 +89,7 @@ html, body {
     box-shadow: 0 5px 2px 0 rgba(168, 168, 168, 0.5);
     border-radius: 4px;
     padding: 26px;
-    margin-top: 30px;
+    margin-top: 38px;
     text-align: center;
     display: flex;
     align-items: center;
@@ -93,9 +97,10 @@ html, body {
     text-decoration: none; }
     .main .main_pay.main_coupon {
       padding: 20px;
-      margin-bottom: 30px; }
+      margin-bottom: 30px;
+      margin-top: 18px; }
     .main .main_pay__text {
-      font-family: HiraginoSans-W6, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+      font-family: HiraginoSans-W6;
       font-size: 20px;
       color: #444444;
       text-align: left;
@@ -138,6 +143,8 @@ html, body {
   color: #000000;
   text-align: right;
   padding-bottom: 10px; }
+.input_page .main {
+  padding-top: 30px; }
 
 .passcode_container {
   padding: 80px 10px; }
@@ -162,15 +169,18 @@ html, body {
   border-radius: 4px;
   margin-top: 20px; }
   .qr-code-page__content__barcode {
-    padding: 30px;
+    padding: 20px;
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
     text-align: center;
     display: block;
     text-decoration: none; }
     .qr-code-page__content__barcode #barcode128 {
       text-align: center; }
     .qr-code-page__content__barcode #qrcode {
-      margin-top: 30px;
-      margin-bottom: 30px;
+      margin-top: 20px;
+      margin-bottom: 20px;
       display: inline-block; }
     .qr-code-page__content__barcode__text {
       font-family: HiraginoSans-W3, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
