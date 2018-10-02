@@ -118,16 +118,19 @@
                 document.getElementById("total").innerText = value.purchase_price_amount;
                 document.getElementById("modal-success").style.display = "block";
             } else{
-                if(window.COUNT < 2){
-                    window.COUNT++;
-                    setTimeout(function () {
-                        checkStatus(transaction_token);
-                    }, 3000);
-                }else{
-                    //@todo : for demo only
-                    document.getElementById("total").innerText = "5,000";
-                    document.getElementById("modal-success").style.display = "block";
-                }
+                // if(window.COUNT < 2){
+                //     window.COUNT++;
+                //     setTimeout(function () {
+                //         checkStatus(transaction_token);
+                //     }, 3000);
+                // }else{
+                //     //@todo : for demo only
+                //     document.getElementById("total").innerText = "5,000";
+                //     document.getElementById("modal-success").style.display = "block";
+                // }
+                setTimeout(function () {
+                    checkStatus(transaction_token);
+                }, 3000);
             }
         })
         .catch(function(err){
